@@ -1,0 +1,51 @@
+header {
+  border: 1px solid var(--surface);
+  height: 101px;
+  padding: 10px 0;
+}
+
+main {
+  display: flex;
+  gap: 70px;
+  justify-content:center ;
+  align-items:flex-start;
+  padding: 40px;
+  flex-wrap: wrap;
+ 
+}
+main > img {
+  width: 539px;
+  height: 719px;
+}
+main section {
+  max-width: 700px;
+  max-height: 300px;
+}
+
+main h1 {
+  font-size: var(--title1);
+  margin-bottom: 75px;
+  margin-top: 20px;
+}
+main section p {
+  margin-bottom: 16px; /* Espaçamento entre os parágrafos */
+  line-height: 1.6;     /* Espaçamento entre linhas dentro do parágrafo */
+}
+
+#cv {
+  display: flex;
+  width: 150px;
+  height: 70px;
+  background-color: var(--secondary);
+  font-size: 32px;
+  color: black;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  margin-top: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+#cv:hover {
+  background-color: #a05fc7;
+}

@@ -1,0 +1,122 @@
+/*.jacques-francois-regular {
+    font-family: "Jacques Francois", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-optical-sizing: auto;
+  }*/
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Jacques Francois", serif;
+    font-optical-sizing: auto;
+  }
+html{
+    background-color: var(--surface);
+    font-size: 16px;
+}
+main{
+   
+    flex: 1;
+}
+:root {
+    /*colors*/
+    --surface: #ECE0F5;
+    --primary: #CEA6CD;
+    --secondary: #BB84D1;
+    /*Typography*/
+    --title1:6rem;/*96px */
+    --title2:3rem;/*48px */
+    --title3:1.5rem;/*24px */
+    --paragraph:1rem;/*16px*/
+    --header-name:2rem;
+
+
+}
+nav a{
+    color: black;
+    text-decoration: none;
+    padding: 10px;
+}
+  
+nav a.active {
+    color: white;
+    font-weight: bold;
+}
+#cop{
+    text-align: center;
+}
+header h3,
+header h5,
+footer section {
+  text-align: center;
+}
+
+footer nav{
+    background-color:var(--secondary);
+    font-size: var(--paragraph);
+    font-weight: lighter;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 47px;
+   
+    
+}
+header h5{
+    font-size: var(--paragraph);
+    font-weight: lighter;
+    
+
+}
+header h3{
+    font-size: var(--header-name);
+  
+
+}
+#returntop {
+    position:fixed;
+    bottom: 80px;
+    right: 20px;
+    width: 50px;
+    height: 100px;
+    background-color: var(--secondary);
+    color: black;
+    border-radius: 47px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: var(--title1); /* tamanho do ícone */
+  }
+  
+ /* #returntop:hover {
+    background-color: #a05fc7;
+  }*/
+  #leftright{
+    display: flex;
+    justify-content:space-evenly;
+  }
+  
+/* Estilo base para botões */
+button {
+    padding: 10px 20px;
+    background-color: var(--surface);
+    border: none;
+    border-radius: 8px;
+    color: black;
+    font-size: var(--paragraph);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--secondary);
+}
+/* Estilo para botões desativados */
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
