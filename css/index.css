@@ -14,9 +14,30 @@ main {
  
 }
 main > img {
-  width: 539px;
-  height: 719px;
+  width: 400px;
+  height: 550px;
+  border-radius: 25%;
+  transition: transform 0.9s ease;
+  box-shadow: 7px 9px 8px rgba(0, 0, 0, 0.3);
+
+  /* animação */
+  opacity: 0;
+  animation: fadeInDown 1.2s ease forwards; /* Usa a nova animação */
 }
+
+/* Animação fadeInDown */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px); /* Começa de cima */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);     /* Vai para o lugar original */
+  }
+}
+
+
 main section {
   max-width: 700px;
   max-height: 300px;
