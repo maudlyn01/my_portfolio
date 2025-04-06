@@ -9,10 +9,26 @@
   }
   
   .resume-section {
-    background-color: var(--primary);
     padding: 25px;
     margin-bottom: 20px;
     border-radius: 8px;
+    animation: slideInResume 1s ease-out forwards;
+
+  }
+  @keyframes slideInResume {
+    from {
+      background-color: var(--sur);
+      opacity: 0;
+      transform: translateY(-30px);
+      font-size: var(--title2);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+      font-size: var(--paragraph);
+      background-color: var(--primary);
+
+    }
   }
   
   .resume-section h3 {

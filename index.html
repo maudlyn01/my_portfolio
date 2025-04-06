@@ -26,9 +26,14 @@
                 <a href="all-projects.html">Projects</a>
             </nav>
         </section>
+        <!-- Botão de alternância de tema 
+<button id="darkModeToggle" style="position: absolute; top: 10px; right: 10px; z-index: 1000;">
+    🌙
+  </button>-->
+  
     </header>
     <main>
-        <img src="img/Profile1.jpeg" alt="My profile photo" />
+        <img class="slide-in-left" src="img/Profile1.jpeg" alt="My profile photo" />
 
         <section>
             <h1>About Me</h1>
@@ -50,7 +55,7 @@
 
         </section>
     </main>
-    <br />
+
     <footer>
         
         <section id="cop">
@@ -58,6 +63,22 @@
             <p><i class="ph-bold ph-hands-praying"></i>Thanks For The Teaching</p>
         </section>
     </footer>
+   <!--<script>
+        // Alternar entre modo claro e escuro
+        const toggleButton = document.getElementById("darkModeToggle");
+      
+        toggleButton.addEventListener("click", () => {
+          document.body.classList.toggle("dark-mode");
+      
+          // Atualiza o texto do botão
+          if (document.body.classList.contains("dark-mode")) {
+            toggleButton.textContent = "☀️";
+          } else {
+            toggleButton.textContent = "🌙";
+          }
+        });
+      </script>-->
+      
 </body>
 
 </html>

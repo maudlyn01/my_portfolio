@@ -1,20 +1,5 @@
-/* Centraliza elementos como imagens, textos ou blocos */
-.center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    text-align: center;
-    margin-top: 20px;
-}
 
-/* Deixa as imagens responsivas e com cantos arredondados */
-img {
-    max-width: 100%;
-    height: 1100px;
-    width: 1500px;
-    border-radius: 8px;
-}
+
 
 /* Aplica margem e centralização geral às seções */
 main section {
@@ -28,20 +13,6 @@ main h2 {
     margin-bottom: 20px;
 }
 
-/* Estilo dos parágrafos para melhor leitura */
-#card-of-project {
-    display: flex;
-    flex-direction: row;
-    justify-content:space-between;
-    gap: 40px;
-    font-size: var(--paragraph);
-    line-height: 1.6;
-    margin-bottom: 10px;
-    text-align: justify;
-    background-color: var(--primary);
-    max-width: 90%;
-    
-}
 #paragraph{
     align-self: flex-end;
 }

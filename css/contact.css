@@ -90,7 +90,7 @@ form label {
 form input,
 form textarea {
   box-sizing: border-box;
-  width: 400px;
+  width: 300px;
   padding: 10px 20px;
   font-size: var(--paragraph);
   background-color: var(--surface);
