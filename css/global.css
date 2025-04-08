@@ -1,0 +1,325 @@
+/*
+    0. A pasta .vscode deve ser eliminada antes do envio do projecto
+    2. Coloque a barra de navehgação no topo, pois para encontrar a barra de navegação,
+        o visitante tem que fazer scroll
+*/
+
+/*.jacques-francois-regular {
+    font-family: "Jacques Francois", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-optical-sizing: auto;
+  }*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Jacques Francois", serif;
+  font-optical-sizing: auto;
+}
+
+html {
+  background-color: var(--surface);
+  font-size: 16px;
+  scroll-behavior: smooth;
+
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  animation: pageFadeIn 1.2s ease-in-out forwards;
+  opacity: 0;
+}
+
+main {
+  flex: 1;
+}
+
+:root {
+  /*colors*/
+  --surface: #ece0f5;
+  --primary: #cea6cd;
+  --secondary: #af8cbd;
+  --highlight: #9d04cc;
+  --text-dark: #705576;
+  --text-light: #3d343f;
+
+  /*Typography*/
+  --title1: 6rem;
+  /*96px */
+  --title2: 3rem;
+  /*48px */
+  --title3: 1.5rem;
+  /*24px */
+  --paragraph: 1rem;
+  /*16px*/
+  --header-name: 2rem;
+}
+
+header,
+footer {
+  background-color: var(--secondary);
+}
+
+nav a {
+  color: black;
+  text-decoration: 0;
+  padding: 10px;
+}
+
+nav a.active {
+  color: #520272;
+  font-weight: bold;
+}
+
+header h3,
+header h5,
+#cop,
+footer {
+  text-align: center;
+}
+footer{
+  margin-top: auto;
+}
+footer section p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+}
+
+
+/*header nav {
+  background-color: var(--primary);
+  font-size: var(--paragraph);
+  font-weight: lighter;
+  height: 40px;
+  width: 100%;
+  max-width: fit-content;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 47px;
+}*/
+header nav {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  padding: 10px 0;
+  animation: slideInTop 1s ease-out forwards;
+
+}
+
+header nav a {
+  color: var(--text-light);
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+header nav a:hover {
+  color: var(--highlight);
+  transform: translateY(-3px);
+}
+
+header h5 {
+  font-size: var(--paragraph);
+  font-weight: lighter;
+}
+
+header h3 {
+  font-size: var(--header-name);
+}
+
+main img {
+  width: 400px;
+  height: 550px;
+  border-radius: 25%;
+  box-shadow: 7px 9px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+}
+
+main img:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+#returntop {
+  position: fixed;
+  bottom: 40px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  background-color: var(--secondary);
+  color: white;
+  border-radius: 50%;
+  font-size: 1.8rem;
+  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+/* #returntop:hover {
+    background-color: #a05fc7;
+  }*/
+#leftright {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+/* Estilo base para botões */
+button {
+  padding: 10px 20px;
+  background-color: var(--surface);
+  border: none;
+  border-radius: 8px;
+  color: black;
+  font-size: var(--paragraph);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--secondary);
+}
+
+/* Estilo para botões desativados */
+button:disabled {
+  opacity: 0;
+  cursor: not-allowed;
+}
+/*===PROJECT1 & PROJECT2===*/
+/* Centraliza elementos como imagens, textos ou blocos */
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 20px;
+}
+/* Deixa as imagens responsivas e com cantos arredondados */
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+/* Estilo dos parágrafos para melhor leitura */
+#card-of-project {
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
+  gap: 40px;
+  font-size: var(--paragraph);
+  line-height: 1.6;
+  margin-bottom: 10px;
+  text-align: justify;
+  background-color: var(--primary);
+  max-width: 90%;
+  
+}
+/*FIM===PROJECT1 & PROJECT2===*/
+
+
+/* =====================
+   ANIMAÇÕES
+===================== */
+@keyframes slideInTop {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+    font-size: var(--title2);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    font-size: var(--paragraph);
+  }
+}
+
+@keyframes pageFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+    /* Ou -20px se quiser que suba */
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =====================
+   RESPONSIVIDADE MOVEL
+===================== */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+
+  main {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem;
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 2rem;
+  }
+
+  main img {
+    max-width: 100%;
+  }
+
+  #cv {
+    width: 100%;
+    font-size: 1.2rem;
+  }
+  footer {
+    padding: 20px 0;
+    color: var(--text-dark);
+  }
+  
+}
+
+/* 🌙 Modo Escuro 
+body.dark-mode {
+  --surface: #1f1723;
+  --primary: #3c224b;
+  --secondary: #5e3c70;
+  --highlight: #c27eff;
+  --text-dark: #f5e9ff;
+  --text-light: #d8c8e4;
+  background-color: var(--surface);
+  color: var(--text-dark);
+}
+
+body.dark-mode nav a {
+  color: var(--text-light);
+}
+
+body.dark-mode nav a:hover {
+  color: var(--highlight);
+}
+
+body.dark-mode button {
+  background-color: var(--primary);
+  color: var(--text-dark);
+}
+
+body.dark-mode button:hover {
+  background-color: var(--highlight);
+}
+
+body.dark-mode #returntop {
+  background-color: var(--highlight);
+  color: #1f1723;
+}
+*/
